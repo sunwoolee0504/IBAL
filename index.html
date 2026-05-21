@@ -46,13 +46,6 @@
       letter-spacing: -0.04em;
     }
 
-    .subtitle {
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin: 0 auto 18px;
-      max-width: 760px;
-    }
-
     .authors {
       margin: 16px 0 6px;
       font-size: 1.02rem;
@@ -105,35 +98,6 @@
       padding: 22px;
     }
 
-    .teaser {
-      width: 100%;
-      min-height: 240px;
-      border: 1px dashed #cbd5e1;
-      border-radius: 18px;
-      background:
-        linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(99, 102, 241, 0.04)),
-        var(--soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      text-align: center;
-      padding: 28px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
-    }
-
-    .small-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      background: white;
-    }
-
     pre {
       overflow-x: auto;
       background: #111827;
@@ -163,9 +127,6 @@
   <main class="container">
     <header>
       <h1>Interaction-Breaking Adversarial Learning Framework for Robust Multi-Agent Reinforcement Learning</h1>
-      <p class="subtitle">
-        A robust MARL framework that constructs interaction-breaking attacks using mutual information and trains agents to remain effective under disrupted coordination.
-      </p>
 
       <p class="authors">
         <strong>Sunwoo Lee</strong>, Mingu Kang, Yonghyeon Jo, Seungyul Han
@@ -180,15 +141,6 @@
     </header>
 
     <section>
-      <div class="teaser">
-        <div>
-          <strong>Teaser / main figure area</strong><br />
-          Replace this block with your figure image later, e.g., <code>assets/teaser.png</code>.
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h2>Abstract</h2>
       <div class="card">
         <p>
@@ -196,33 +148,6 @@
           Prior robust MARL methods have primarily considered value-oriented attacks, leaving a gap in robustness when interaction structures themselves are corrupted.
           We propose Interaction-Breaking Adversarial Learning (IBAL), an information-theoretic framework that constructs attacks by perturbing agents’ observations and actions to impede coordination, and trains agents to perform reliably under such disruptions.
           Experiments show that IBAL improves robustness over existing robust MARL baselines across diverse attack settings and yields stronger performance under agent-missing scenarios.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Key Ideas</h2>
-      <div class="grid">
-        <div class="small-card">
-          <strong>Interaction-Breaking Attack</strong>
-          <p>Uses mutual information to identify and suppress cross-group influence among agents.</p>
-        </div>
-        <div class="small-card">
-          <strong>Observation & Action Perturbation</strong>
-          <p>Combines MI-guided observation masking with MI-minimizing action perturbations.</p>
-        </div>
-        <div class="small-card">
-          <strong>Robust Policy Learning</strong>
-          <p>Trains MARL policies under induced perturbed dynamics for stronger robustness.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Results</h2>
-      <div class="card">
-        <p>
-          IBAL is evaluated on SMAC, SMACv2, and Level-Based Foraging. It improves average robustness under adversarial attacks and non-parametric perturbations such as disabled agents and reduced ally health.
         </p>
       </div>
     </section>
